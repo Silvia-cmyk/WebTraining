@@ -1,1 +1,1 @@
-# WebExercise
+# WebTraining
