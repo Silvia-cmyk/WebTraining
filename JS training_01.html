@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"></meta>
+<title>javascript 函式</title>
+<script type="text/javascript">
+	//alert("Hello!!");//警告視窗
+	
+	//函式本體
+
+	/*
+	function add(n1,n2){
+		alert(n1+n2);
+		return n1+n2;//回傳
+	}
+	var re=add(15,24)*add(1,2);
+	alert(re);
+	*/
+	/*var sum=0;
+	var n=1;
+	while(n<=30){
+		sum+=n;
+		n++;
+	}
+	alert(sum); 
+	//重複寫的程式時就會想到函式*/
+	function getSum(number){
+		var n=1;
+		var sum=0;
+		while(n<=number){
+			sum+=n;
+			n++;
+		}
+		//alert(sum);
+		return sum;
+	}
+	/*getSum(30);
+	  getSum(100);*/
+	var test=getSum(30)+getSum(100);
+		alert(test);
+</script>
+</head>
+<body>
+</body>
+</html>
