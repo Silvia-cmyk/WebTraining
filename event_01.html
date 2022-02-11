@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>事件處理01</title>
+<script	type="text/javascript">
+//用javascript的程式，動態註冊事件處理器
+function load(){
+	var test=document.getElementById("test"); //把點擊抓到test中
+	/*
+	test.onclick=function(){
+		alert("點");
+	};
+	*/
+	var handler=function(){ //準備一個事件處理器(對應事件的函式)
+		alert("點");
+	};
+	test.addEventListener("click" ,handler/*事件處理器名稱*/);
+}
+</script>
+</head>
+<body	onload="load();">
+	<button	id="test">點擊</button>
+	<span onclick="alert('');">text</span>
+</body>
+</html>
