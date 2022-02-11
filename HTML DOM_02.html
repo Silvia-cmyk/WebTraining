@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>HTML DOM02</title>
+<script	type="text/javascript">
+function test(number){
+	var meau=document.getElementById("meau-"+number); //動態選擇
+	meau.classList.toggle("hide"); //切換標籤class的hide設定
+	/*有以上以下配合省略if條件式
+	if(meau.style.display=="none"){
+		meau.style.display="block";
+	}else{
+		meau.style.display="none";
+	}
+	*/
+}
+</script>
+<style	type="text/css">
+.hide{display:none;}
+</style>
+</head>
+<body>	
+	<div	onclick="test(1);">我是標題</div>
+	<ul id="meau-1">
+		<li>項目1-1</li>
+		<li>項目1-2</li>
+		<li>項目1-3</li>
+	</ul>
+	<div	onclick="test(2);">我是標題</div>
+	<ul id="meau-2">
+		<li>項目2-1</li>
+		<li>項目2-2</li>
+		<li>項目2-3</li>
+	</ul>
+	<div	onclick="test(3);">我是標題</div>
+	<ul id="meau-3">
+		<li>項目3-1</li>
+		<li>項目3-2</li>
+		<li>項目3-3</li>
+	</ul>
+</body>
+</html>
