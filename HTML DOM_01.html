@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML DOM01</title>
+<script	type="text/javascript">
+//alert(window.screen.width+"x"+window.screen.height);//螢幕寬度高度
+function change(){
+	var spanObj=window.document.getElementById("test"); 
+				//window可寫可不寫
+	spanObj.innerHTML="Test+1";
+	spanObj.style.color="red";
+	spanObj.style.fontWeight="bold"; 
+			//CSS font-weight；javascript fontWeight
+	//spanObj.style.display="none";	//隱藏
+}
+</script>
+</head>
+<body>
+	<div>
+		<span id="test">Test.</span>
+	</div>
+	<button	onclick="change();">Change</button>
+</body>
+</html>
