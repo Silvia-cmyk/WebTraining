@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>json 基礎</title>
+<script	type="text/javascript">
+// JSON:	Javascipt Object Notation(JavaScript物件表示法)
+/*
+	var point=new Object(); 原始基本的寫法 javascipt
+	point.x=1;
+	point.y=1;
+	point.get=function(){
+		alert(this.x+","+this.y);
+	};
+*/
+//point是一個物件
+var point={"x":1,
+		   "y":1,
+		   "get":function(){
+				alert(this.x+","+this.y);
+			}
+};
+//point.get(); //物件呼叫的方法
+//console.log(JSON.stringify(point)); //純字串
+var jsonstr=JSON.stringify(point);	//物件轉字串
+console.log(jsonstr);
+var plainObj=JSON.parse(jsonstr);	//字串轉物件
+console.log(plainObj);
+alert(plainObj.x);
+</script>
+</head>
+<body>
+</body>
+</html>
