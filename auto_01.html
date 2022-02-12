@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>自動排程 Schedule</title>
+<script type="text/javascript">
+var timer;
+function test(){
+	timer=document.getElementById("timer");
+	//window.setTimeout(countdown, 1000);
+	window.setInterval(countdown, 1000); 
+}
+function countdown(){
+	timer.innerHTML=timer.innerHTML-1;
+	if(timer.innerHTML>0){
+		//window.setTimeout(countdown, 1000);
+	}else{
+		document.location="https://www.google.com.tw/?hl=zh_TW";
+	}
+}
+</script>
+</head>
+<body	onload="test();">
+	<span id="timer">5</span>
+</body>
+</html>
