@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>AJAX 標籤選單</title>
+<script type="text/javascript">
+function getData(name){
+	var req=new XMLHttpRequest();
+	req.open("get","http://127.0.0.1:1212/"+name); 
+	req.onload=function(){ 
+			var content=document.getElementById("content");
+			content.innerHTML=this.responseText;
+			//alert(this.responseText);
+	};
+	req.send(); 
+}
+</script>
+</head>
+<body	onload="getData('popular.html');"> <!--網頁一進入初始化頁面-->
+	<div>
+		<span 	onclick="getData('popular.html');">熱門</span>
+		<span	onclick="getData('latest.html');">準備上映</span>
+	</div>
+	<hr/> <!--一條水平標線-->
+	<div id="content" /> <!--存放最後顯示結果-->
+</body>
+</html>
